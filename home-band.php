@@ -34,7 +34,7 @@ if($recs=='') $recs="0";
 $sql="select n.host,n.name,l.bw,t.ifinoctets_delta as inb, t.ifoutoctets_delta as outb, device_id 
 from ports t join nimdb.core_ports x on x.port=t.port_id join nimdb.core_node n on x.host=n.host 
 left join nimdb.core_location l on l.locid=n.loc 
-where x.traffic='Y' and t.ifoutoctets_delta<>t.ifinoctets_delta and $whr 
+where x.traffic='Y' and t.ifoutoctets_delta<>t.ifinoctets_delta and x.host in (select hostname from devices where status=1) and $whr 
  order by inb $ord limit 5";
 
 $rs=exec_qry($conn,$sql);

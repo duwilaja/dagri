@@ -63,7 +63,7 @@ disconnect($conn);
 										<th>Status</th>
 										<th>Network</th>
 										<th>Province</th>
-										<!--th>Group</th-->
+										<th>Group</th>
 										<th>Type</th>
 									</tr>
 								</thead>
@@ -204,8 +204,9 @@ include "inc.js.php";
 $loc=get("loc")==""?"1=1":"loc='".get("loc")."'";
 $status=get("status")==""?"1=1":"status='".get("status")."'";
 $typ=get("typ")==""?"1=1":"typ='".get("typ")."'";
+$grp=get("grp")==""?"1=1":"grp='".get("grp")."'";
 
-$where = "$loc and $status and $typ";
+$where = "$loc and $status and $typ and $grp";
 
 $tname="core_node n left join core_status s on n.host=s.host left join core_location l on l.locid=loc";
 $cols="n.host,n.name,if(status=1,'UP','DOWN') as stt,net,loc,grp,typ,n.rowid";

@@ -15,9 +15,7 @@ $breadcrumb="Report/$page_title";
 
 $o_lovrpt=[
 	["ping","ping"],
-	["traffic","traffic"],
-	["wan1","wan1 traffic"],
-	["wan2","wan2 traffic"]
+	["traffic","traffic all ports"]
 ];
 
 $gx=($s_GRP=="")?"":" and val='$s_GRP'";
@@ -26,6 +24,8 @@ include "inc.db.php";
 $conn=connect();
 $rs=exec_qry($conn,"select val,txt from core_lov where typ='group' $gx order by txt");
 $o_grp=fetch_all($rs);
+$rs=exec_qry($conn,"select distinct ifname,concat('port ',ifname) from core_ports where traffic='Y'");
+$o_rpt=fetch_all($rs);
 disconnect($conn);
 
 include "inc.head.php";
@@ -130,6 +130,7 @@ include "inc.menutop.php";
 				<select class="form-control " id="rpt" name="rpt">
 					<option value=""></option>
 					<?php echo options($o_lovrpt)?>
+					<?php echo options($o_rpt)?>
 				</select>
 			</div>
 			<div class="form-group col-md-6">
