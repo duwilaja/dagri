@@ -79,7 +79,91 @@ include "inc.menutop.php";
 				<!-- COL END -->
 				</div>
 			<!--End row-->
-	
+			
+			<div class="row row-sm">
+				<div class="col-lg-4">
+					<div class="card custom-card card-collapsed">
+						<div class="card-header justify-content-between" style="display: flex;">
+							 <div class="card-title main-content-label mb-1"> Detail </div> 
+							 <span><a href="javascript:void(0);" data-bs-toggle="card-collapse"> <i class="fe fe-plus"></i> </a>&nbsp;&nbsp;
+							 <!--a href="javascript:void(0);" data-bs-toggle="card-fullscreen"> <i class="fe fe-maximize"></i> </a--></span>
+						</div>
+						<div class="card-body">
+							<div class="justify-content-between" style="display:flex;">
+								<div>
+									<span>Pusat</span><br />
+									<span>Propinsi</span><br />
+									<span>Kabupaten/Kota</span><br />
+									<span>Kecamatan</span><br />
+									<span>Desa/Kelurahan</span><br />
+								</div>
+								<div>
+									<span class="dtlt" id="pusat_dtot">0</span><br />
+									<span class="dtlt" id="propinsi_dtot">0</span><br />
+									<span class="dtlt" id="kabupaten_dtot">0</span><br />
+									<span class="dtlt" id="kecamatan_dtot">0</span><br />
+									<span class="dtlt" id="kelurahan_dtot">0</span><br />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="card custom-card card-collapsed">
+						<div class="card-header justify-content-between" style="display: flex;">
+							 <div class="card-title main-content-label mb-1"> Detail ON </div> 
+							 <span><a href="javascript:void(0);" data-bs-toggle="card-collapse"> <i class="fe fe-plus"></i> </a>&nbsp;&nbsp;
+							 <!--a href="javascript:void(0);" data-bs-toggle="card-fullscreen"> <i class="fe fe-maximize"></i> </a--></span>
+						</div>
+						<div class="card-body">
+							<div class="justify-content-between" style="display:flex;">
+								<div>
+									<span>Pusat</span><br />
+									<span>Propinsi</span><br />
+									<span>Kabupaten/Kota</span><br />
+									<span>Kecamatan</span><br />
+									<span>Desa/Kelurahan</span><br />
+								</div>
+								<div>
+									<span class="dtlt" id="pusat_don">0</span><br />
+									<span class="dtlt" id="propinsi_don">0</span><br />
+									<span class="dtlt" id="kabupaten_don">0</span><br />
+									<span class="dtlt" id="kecamatan_don">0</span><br />
+									<span class="dtlt" id="kelurahan_don">0</span><br />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="card custom-card card-collapsed">
+						<div class="card-header justify-content-between" style="display: flex;">
+							 <div class="card-title main-content-label mb-1"> Detail OFF </div> 
+							 <span><a href="javascript:void(0);" data-bs-toggle="card-collapse"> <i class="fe fe-plus"></i> </a>&nbsp;&nbsp;
+							 <!--a href="javascript:void(0);" data-bs-toggle="card-fullscreen"> <i class="fe fe-maximize"></i> </a--></span>
+						</div>
+						<div class="card-body">
+							<div class="justify-content-between" style="display:flex;">
+								<div>
+									<span>Pusat</span><br />
+									<span>Propinsi</span><br />
+									<span>Kabupaten/Kota</span><br />
+									<span>Kecamatan</span><br />
+									<span>Desa/Kelurahan</span><br />
+								</div>
+								<div>
+									<span class="dtlt" id="pusat_doff">0</span><br />
+									<span class="dtlt" id="propinsi_doff">0</span><br />
+									<span class="dtlt" id="kabupaten_doff">0</span><br />
+									<span class="dtlt" id="kecamatan_doff">0</span><br />
+									<span class="dtlt" id="kelurahan_doff">0</span><br />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
 			<div class="row row-sm">
 				<div class="col-lg-12">
 					<div class="card custom-card">

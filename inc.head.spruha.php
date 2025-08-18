@@ -135,6 +135,10 @@
 		#legend img {
 		  vertical-align: middle;
 		}
+		
+		.card-header{
+			padding-bottom: 10px;
+		}
 
 		</style>
 
