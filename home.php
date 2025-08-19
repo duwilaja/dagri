@@ -98,11 +98,11 @@ include "inc.menutop.php";
 									<span>Desa/Kelurahan</span><br />
 								</div>
 								<div>
-									<span class="dtlt" id="pusat_dtot">0</span><br />
-									<span class="dtlt" id="propinsi_dtot">0</span><br />
-									<span class="dtlt" id="kabupaten_dtot">0</span><br />
-									<span class="dtlt" id="kecamatan_dtot">0</span><br />
-									<span class="dtlt" id="kelurahan_dtot">0</span><br />
+									<span class="pusat_dtot">0</span><br />
+									<span class="propinsi_dtot">0</span><br />
+									<span class="kabupaten_dtot">0</span><br />
+									<span class="kecamatan_dtot">0</span><br />
+									<span class="kelurahan_dtot">0</span><br />
 								</div>
 							</div>
 						</div>
@@ -125,11 +125,11 @@ include "inc.menutop.php";
 									<span>Desa/Kelurahan</span><br />
 								</div>
 								<div>
-									<span class="dtlt" id="pusat_don">0</span><br />
-									<span class="dtlt" id="propinsi_don">0</span><br />
-									<span class="dtlt" id="kabupaten_don">0</span><br />
-									<span class="dtlt" id="kecamatan_don">0</span><br />
-									<span class="dtlt" id="kelurahan_don">0</span><br />
+									<span class="pusat_don">0</span><br />
+									<span class="propinsi_don">0</span><br />
+									<span class="kabupaten_don">0</span><br />
+									<span class="kecamatan_don">0</span><br />
+									<span class="kelurahan_don">0</span><br />
 								</div>
 							</div>
 						</div>
@@ -152,11 +152,11 @@ include "inc.menutop.php";
 									<span>Desa/Kelurahan</span><br />
 								</div>
 								<div>
-									<span class="dtlt" id="pusat_doff">0</span><br />
-									<span class="dtlt" id="propinsi_doff">0</span><br />
-									<span class="dtlt" id="kabupaten_doff">0</span><br />
-									<span class="dtlt" id="kecamatan_doff">0</span><br />
-									<span class="dtlt" id="kelurahan_doff">0</span><br />
+									<span class="pusat_doff">0</span><br />
+									<span class="propinsi_doff">0</span><br />
+									<span class="kabupaten_doff">0</span><br />
+									<span class="kecamatan_doff">0</span><br />
+									<span class="kelurahan_doff">0</span><br />
 								</div>
 							</div>
 						</div>
