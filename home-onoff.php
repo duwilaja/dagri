@@ -27,7 +27,7 @@ $sql="select count(s.host),sum(status),grp from core_status s left join core_nod
 //$sql.=$whr=='1=1'?"":" where host in (select host from core_node where $whr)";
 
 $rs=exec_qry($conn,$sql);
-if($row=fetch_row($rs)){
+while($row=fetch_row($rs)){
 	$all+=$row[0]==null?0:$row[0];
 	$on+=$row[1]==null?0:$row[1];
 	$allpus=strtolower($row[2])=='pusat'?$row[0]:$allpus;
