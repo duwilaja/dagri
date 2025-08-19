@@ -93,9 +93,9 @@ include "inc.menutop.php";
 								<div>
 									<span>Pusat</span><br />
 									<span>Propinsi</span><br />
-									<span>Kabupaten/Kota</span><br />
+									<span>Kabupaten</span><br />
 									<span>Kecamatan</span><br />
-									<span>Desa/Kelurahan</span><br />
+									<span>Kelurahan</span><br />
 								</div>
 								<div>
 									<span class="pusat_dtot">0</span><br />
@@ -120,9 +120,9 @@ include "inc.menutop.php";
 								<div>
 									<span>Pusat</span><br />
 									<span>Propinsi</span><br />
-									<span>Kabupaten/Kota</span><br />
+									<span>Kabupaten</span><br />
 									<span>Kecamatan</span><br />
-									<span>Desa/Kelurahan</span><br />
+									<span>Kelurahan</span><br />
 								</div>
 								<div>
 									<span class="pusat_don">0</span><br />
@@ -147,9 +147,9 @@ include "inc.menutop.php";
 								<div>
 									<span>Pusat</span><br />
 									<span>Propinsi</span><br />
-									<span>Kabupaten/Kota</span><br />
+									<span>Kabupaten</span><br />
 									<span>Kecamatan</span><br />
-									<span>Desa/Kelurahan</span><br />
+									<span>Kelurahan</span><br />
 								</div>
 								<div>
 									<span class="pusat_doff">0</span><br />
