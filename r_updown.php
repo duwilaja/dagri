@@ -37,6 +37,10 @@ include "inc.db.php";
 				<div class="mb-3">
 					<div class="card-body">
 						<div class="row">
+							<div class="col-md-3">
+							<select class="form-control select2" id="loca">
+							</select>
+							</div>
 							<div class="col-md-2"><div class="input-group">
 								<input type="text" id="df" placeholder="From Date" class="form-control datepicker">
 								<div class="input-group-append"><span class="input-group-text"><i class="fa fa-calendar"></i></span></div>
@@ -118,6 +122,8 @@ $(document).ready(function(){
 				d.where= '<?php echo base64_encode($where); ?>',
 				d.fdtmf= get_dt($("#df").val()),
 				d.fdtmt= get_dt($("#dt").val()),
+				d.filtereq='loc',
+				d.loc=$("#loca").val(),
 				d.x= '<?php echo $menu?>';
 			}
 		},
@@ -137,6 +143,8 @@ $(document).ready(function(){
 			required : true
 		}
     }});
+	$(".select2").select2();
+	getCombo('dataget'+ext,'loclov','','#loca',dv='',blnk='All Location');
 });
 
 function get_tname(){

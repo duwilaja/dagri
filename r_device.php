@@ -31,7 +31,31 @@ include "inc.menutop.php";
 			</div-->
 		</div>
 		<!--End Page header-->
-		
+				<div class="card">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-3">
+							<select class="form-control select2" id="loca">
+							</select>
+							</div>
+							<div class="col-md-3">
+							<select class="form-control" id="tipe">
+							</select>
+							</div>
+							<div class="col-md-2">
+							<select class="form-control" id="snmp">
+								<option value="">All SNMP</option>
+								<option value="1">Enabled</option>
+								<option value="0">Disabled</option>
+							</select>
+							</div>
+							&nbsp;&nbsp;&nbsp;
+							<button type="button" onclick="reloadtbl();" class="btn btn-primary col-md-1">Submit</button>
+							
+							<input type="hidden" id="tname">
+						</div>
+					</div>
+				</div>
 				<div class="card">
 					<div class="card-header">
 						<div class="card-title"><?php echo $card_title?></div>
@@ -51,6 +75,7 @@ include "inc.menutop.php";
 										<th>Location</th>
 										<th>Group</th>
 										<th>Type</th>
+										<th>Status</th>
 										<th>SLA</th>
 										<th>SNMP</th>
 									</tr>
@@ -70,8 +95,8 @@ include "inc.foot.php";
 include "inc.js.php";
 
 
-$tname="core_node";
-$cols="host,name,net,loc,grp,typ,sla,snmpenabled";
+$tname="core_node n left join core_status s on n.host=s.host";
+$cols="n.host,name,net,loc,grp,typ,status,n.sla,snmpenabled";
 $csrc="";
 $grpby="";
 $where=""; $clso="";
@@ -100,6 +125,10 @@ $(document).ready(function(){
 				d.csrc= '<?php echo base64_encode($csrc); ?>',
 				d.grpby= '<?php echo base64_encode($grpby); ?>',
 				d.where= '<?php echo base64_encode($where); ?>',
+				d.filtereq='loc,snmpenabled,typ',
+				d.loc=$("#loca").val(),
+				d.snmpenabled=$("#snmp").val(),
+				d.typ=$("#tipe").val(),
 				d.x= '-';
 			}
 		},
@@ -119,8 +148,14 @@ $(document).ready(function(){
 			required : true
 		}
     }});
+	$(".select2").select2();
+	getCombo('dataget'+ext,'loclov','','#loca',dv='',blnk='All Location');
+	getCombo('dataget'+ext,'typlov','','#tipe',dv='',blnk='All Type');
 });
 
+function reloadtbl(){
+	mytbl.ajax.reload();
+}
 </script>
 
   </body>
